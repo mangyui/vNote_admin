@@ -11,9 +11,6 @@ import '@/styles/index.scss' // global css
 
 // import './mock' // simulation data
 
-// font-awesome
-// import '@/assets/library/font-awesome-4.7.0/css/font-awesome.min.css'
-
 import App from './App'
 
 import router from './router'
@@ -23,27 +20,9 @@ import store from './store'
 // Internationalization
 import i18n from './lang'
 
-// import {            //远程获取Font Awesome图标库
-//   loadStyle
-// } from './utils/util'
-// import {
-//   iconfontUrl,
-//   iconfontVersion
-// } from '@/config/env'
-
-// iconfontVersion.forEach(ele => {
-//   loadStyle(iconfontUrl.replace('$key', ele))
-// })
-
 import '@/icons' // icon
 
 import '@/permission' // permission control
-
-import * as filters from './filters' // global filters ************
-// register global utility filters.
-Object.keys(filters).forEach(key => {
-  Vue.filter(key, filters[key])
-})
 
 Vue.use(ElementUI, { locale })
 

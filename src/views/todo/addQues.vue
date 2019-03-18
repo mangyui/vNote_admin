@@ -210,20 +210,6 @@ export default {
           { required: true, message: '请选择题目类型', trigger: 'change' }
         ]
       }
-      // toadd: {
-      //   UserId: this.$store.getters.user.Id,
-      //   Name: '',
-      //   Intro: ''
-      // },
-      // addrules: {
-      //   Name: [
-      //     { required: true, message: '请输入分类名', trigger: 'blur' },
-      //     { min: 1, max: 10, message: '长度在 1 到 10 个字符', trigger: 'blur' }
-      //   ],
-      //   Intro: [
-      //     { min: 0, max: 30, message: '长度在 0 到 30 个字符', trigger: 'blur' }
-      //   ]
-      // }
     }
   },
   // beforeRouteEnter(to, from, next) {
@@ -333,21 +319,27 @@ export default {
         .catch(err => console.error(err))
     },
     formatText() {
-      if (this.lines > 0) {
-        this.result.forEach(item => {
-          this.form.Content = this.form.Content + item.words + '<br />'
-          this.form.Text = this.form.Text + item.words
-        })
-        // // 这里获取相关题目
-        // this.getQues()
-      } else {
-        this.$notify({
-          title: '提示',
-          message: '没有提取任何文字信息，请检查图片再操作！',
-          type: 'info'
-        })
-        this.showGIF = false
-      }
+        if (this.lines > 0) {
+          this.result.forEach(item => {
+            this.form.Content = this.form.Content + item.words + '<br />'
+            this.form.Text = this.form.Text + item.words
+          })
+          ShouTitle.txt.html(this.form.Content)
+          this.$notify({
+            title: '提示',
+            message: '已提取图中文字',
+            type: 'info'
+          })
+          // // 这里获取相关题目
+          // this.getQues()
+        } else {
+          this.$notify({
+            title: '提示',
+            message: '没有提取任何文字信息，请检查图片再操作！',
+            type: 'info'
+          })
+        }
+      this.showGIF = false
     },
     // addMistakeType() {
     //   if (!this.$store.getters.user.Id) {

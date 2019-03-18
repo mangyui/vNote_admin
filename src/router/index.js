@@ -122,26 +122,6 @@ export const constantRouterMap = [
 
     ]
   },
-  // 语音
-  // {
-  //   path: '/Voice',
-  //   component: Layout,
-  //   redirect: '/Voice/index',
-  //   hidden: true,
-  //   meta: {
-  //     title: 'Voice',
-  //     icon: 'voice'
-  //   },
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       name: 'Voice',
-  //       component: () => import('@/views/todo/voice'),
-  //       meta: { title: 'Voice', icon: 'voice' }
-  //     }
-
-  //   ]
-  // },
   // 用户
   {
     path: '/user',
@@ -195,27 +175,6 @@ export const constantRouterMap = [
         component: () => import('@/views/todo/edit'),
         meta: { title: 'Edit', icon: 'edit' }
       }
-      // {
-      //   path: 'addMistake',
-      //   name: 'addMistake',
-      //   hidden: true,
-      //   component: () => import('@/views/todo/addMistake'),
-      //   meta: { title: 'addMistake' }
-      // }
-      // {
-      //   path: 'voice',
-      //   name: 'voice',
-      //   component: () => import('@/views/todo/voice'),
-      //   meta: { title: 'Voice' }
-      // }
-      // {
-      //   path: 'ocr',
-      //   name: 'ocr',
-      //   hidden: true,
-      //   component: () => import('@/views/todo/ocr'),
-      //   meta: { title: 'OCR' }
-      // },
-
     ]
   },
   // 笔记
@@ -287,7 +246,7 @@ export const constantRouterMap = [
     ]
   },
 
-  // 表格
+  // 学校
   {
     path: '/School',
     component: Layout,
@@ -305,37 +264,6 @@ export const constantRouterMap = [
         meta: { title: 'SchoolList', icon: 'component' }
       }
 
-    ]
-  },
-  // // 第三方网站
-  // {
-  //   path: '/other',
-  //   component: Layout,
-  //   redirect: '/more/index',
-  //   hidden: true,
-  //   meta: { title: 'Other', icon: 'baidumap' },
-  //   children: [
-  //     {
-  //       path: 'open/:id',
-  //       name: 'open',
-  //       component: () => import('@/views/other/open'),
-  //       meta: { title: 'Open' }
-  //     }
-  //   ]
-  // },
-  // 关于 帮助
-  {
-    path: '/about',
-    component: Layout,
-    redirect: '/about/index',
-    meta: { title: 'about', icon: 'international' },
-    children: [
-      {
-        path: 'index',
-        name: 'about',
-        component: () => import('@/views/about/index'),
-        meta: { title: 'about', icon: 'international' }
-      }
     ]
   },
   { path: '*', redirect: '/404', hidden: true }

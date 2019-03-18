@@ -55,10 +55,10 @@ export default {
   justify-content: center;
   align-items: center;
   // width: 230px;
-  height: 50px;
-  line-height: 50px;
+  height: 100px;
+  line-height: 100px;
   // background: #207773;
-  background: #23262E;
+  background: rgb(0, 0, 0);
   color: #fdfdfd;
   text-align: center;
   font-size: 20px;

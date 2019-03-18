@@ -1,13 +1,13 @@
 <template>
   <el-scrollbar wrapClass="scrollbar-wrapper">
     <logo :isCollapse="isCollapse"></logo>
-    <div class="user_center">
+    <!-- <div class="user_center">
       <router-link  :to="user.Id?'/user/index':'/login'" class="avatar"><img :src="avatar"></router-link>
       <div>
         <p class="user_name">{{user.Name||'未登录'}}</p>
         <p  v-if="user.Id" class="user_address">学生</p>
       </div>
-    </div>
+    </div> -->
     <el-menu
       mode="vertical"
       :show-timeout="200"
